@@ -1,0 +1,5 @@
+methods:
+  - pattern: flask.templating.render_template
+    tags:
+      - key: category
+        value: XSS
