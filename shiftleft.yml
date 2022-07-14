@@ -7,4 +7,3 @@ build_rules:
     finding_types: [oss_vuln]
     options:
       reachable: true
- 
