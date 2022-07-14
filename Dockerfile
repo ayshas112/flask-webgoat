@@ -19,4 +19,4 @@ RUN python3 -m venv .venv \
     && pip install -r requirements.txt
 
 # Perform sl analysis
-RUN ./sl analyze --app flask-webgoat-docker --tag branch=$BRANCH --python --cpg .
+RUN if [ "$SHIFTLEFT_ACCESS_TOKEN" ]; then ./sl analyze --app flask-webgoat-docker --tag branch=$BRANCH --python --cpg .; fi
