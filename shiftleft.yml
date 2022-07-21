@@ -1,9 +1,12 @@
 build_rules:
   - id: non_highs
-    severity: [critical, moderate]
+    cvss_31_severity_ratings: [critical, high]
     finding_types: [vuln]
   - id: only_reachable
-    severity: [critical, moderate]
+    cvss_31_severity_ratings: [critical, high]
     finding_types: [oss_vuln]
     options:
       reachable: true
+  - id: non_container
+    cvss_31_severity_ratings: [critical, high]
+    finding_types: [container]

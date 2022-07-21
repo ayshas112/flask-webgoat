@@ -9,6 +9,9 @@ ARG BRANCH=master
 WORKDIR /app
 COPY . /app/
 
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt update && apt upgrade -y && rm -rf /var/lib/apt/lists/*
+
 # Download ShiftLeft
 RUN curl https://cdn.shiftleft.io/download/sl > sl && chmod a+rx sl
 
